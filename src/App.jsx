@@ -8,27 +8,26 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <img className="awning"src="https://heroic-pixie-6d7f91.netlify.app/awning.png"></img>
+      <h1>Food Truck Favorites</h1>
+      <Card 
+        img={"https://pyxis.nymag.com/v1/imgs/38c/2ac/b02a093f6b846ebd1aca78b0d59c7e427a-birria-1.rsocial.w1200.jpg"}
+        businessTitle={"Birria-Landia"}
+        type={"Mexican"}
+        menusrc={"https://thebirrialandia.com/menu/"}
+      />
     </>
+  )
+}
+
+function Card({img, businessTitle, type, menusrc}){
+  return(
+    <div className={"card"}>
+      <img src={img}></img>
+      <h3>{businessTitle}</h3>
+      <h4>{type}</h4>
+      <a href={menusrc}>View Menu</a>
+    </div>
   )
 }
 
