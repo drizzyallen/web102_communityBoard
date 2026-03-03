@@ -13,7 +13,7 @@ html, body{
 
 .awning{
   display: block;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -25,8 +25,11 @@ h1{
     margin-left: 50px;
 }
 
-.awning{
-  margin: 0,auto, auto, auto;
+.container{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .card {
